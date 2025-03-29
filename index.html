@@ -144,6 +144,33 @@
       left: -16px;
       right: auto;
     }
+    /* About section styles */
+    .about-content {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .about-image {
+      flex: 0 0 300px;
+    }
+    .about-image img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    .about-text {
+      flex: 1;
+      text-align: left;
+    }
+    .about-text p {
+      text-align: left;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
   </style>
 </head>
 <body>
@@ -165,7 +192,15 @@
   <!-- About Section -->
   <section id="about" class="section about" style="background-color: #e2e8f0;">
     <h2 style="text-align:center; font-size: 2rem; margin-bottom: 2rem;">About Me</h2>
-    <p>I'm a Sales and GTM professional with a passion for building and scaling high-performing teams. I enjoy working at the intersection of strategy, execution, and storytelling.</p>
+    <div class="about-content">
+      <div class="about-image">
+        <img src="images/profile_image_optimized.jpg" alt="Brenton Otis">
+      </div>
+      <div class="about-text">
+        <p>I'm a Sales and GTM professional with a passion for building and scaling high-performing teams. I enjoy working at the intersection of strategy, execution, and storytelling.</p>
+        <p>With years of experience in sales and go-to-market strategies, I've helped organizations achieve their growth objectives while fostering strong team cultures and driving innovation.</p>
+      </div>
+    </div>
   </section>
 
   <!-- Professional Journey Section -->
