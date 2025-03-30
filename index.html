@@ -8,6 +8,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
       font-family: 'Raleway', sans-serif;
@@ -308,10 +311,10 @@
       <h1>Brenton Otis</h1>
       <p>Technical Sales and GTM Leader</p>
       <div class="hero-buttons">
-        <a href="#about" class="glass-button">About Me</a>
-        <a href="#journey" class="glass-button">Career Journey</a>
-        <a href="#projects" class="glass-button">View My Work</a>
-        <a href="#contact" class="glass-button">Contact Me</a>
+        <a href="#about" class="glass-button" onclick="scrollToSection(event, 'about')">About Me</a>
+        <a href="#journey" class="glass-button" onclick="scrollToSection(event, 'journey')">Career Journey</a>
+        <a href="#projects" class="glass-button" onclick="scrollToSection(event, 'projects')">View My Work</a>
+        <a href="#contact" class="glass-button" onclick="scrollToSection(event, 'contact')">Contact Me</a>
       </div>
     </div>
   </section>
@@ -450,5 +453,19 @@
     <p>Connect with me on <a href="https://www.linkedin.com/in/brentonotis" target="_blank">LinkedIn</a> or email me at: <a href="mailto:brenton.otis@gmail.com">brenton.otis@gmail.com</a></p>
   </section>
 
+  <script>
+    function scrollToSection(event, sectionId) {
+      event.preventDefault();
+      const section = document.getElementById(sectionId);
+      const headerOffset = 80; // Adjust this value based on your header height
+      const elementPosition = section.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  </script>
 </body>
 </html> 
