@@ -129,14 +129,20 @@
     }
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
     }
     .project-card {
       background-color: #fff;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
     }
     .project-card img {
       width: 100%;
@@ -144,19 +150,35 @@
       object-fit: cover;
     }
     .project-card-content {
-      padding: 1rem;
+      padding: 1.5rem;
     }
     .project-card-content h3 {
       margin-top: 0;
-      font-size: 1.25rem;
+      font-size: 1.4rem;
+      color: #007BFF;
+      margin-bottom: 0.5rem;
     }
     .project-card-content p {
-      margin: 0.5rem 0 1rem;
+      margin: 0.5rem 0;
       color: #555;
+      line-height: 1.6;
+    }
+    .project-card-content .tech-stack {
+      color: #666;
+      font-size: 0.9rem;
+      margin: 0.5rem 0 1rem 0;
     }
     .project-card-content a {
-      color: #007BFF;
+      display: inline-block;
+      background-color: #007BFF;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
       text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .project-card-content a:hover {
+      background-color: #0056b3;
     }
     .about p {
       text-align: center;
@@ -365,13 +387,58 @@
   <section id="projects" class="section">
     <h2 style="text-align:center; font-size: 2rem; margin-bottom: 2rem;">Projects</h2>
     <div class="projects">
-      <!-- Project Card -->
       <div class="project-card">
-        <img src="project-image.jpg" alt="Project Name">
+        <img src="https://image.ibb.co/cjOUqn/Portfolio-Project-Cruise-On.png" alt="Cruise On Screenshot">
         <div class="project-card-content">
-          <h3>Project Name</h3>
-          <p>Brief description of the project.</p>
-          <a href="#">Learn More</a>
+          <h3>Cruise On Website</h3>
+          <p>Site for local charter van rental service; Conceptualized/built out site and created all content.</p>
+          <p class="tech-stack">Wordpress, CSS</p>
+          <a href="http://chartervanaustin.com/" target="_blank">See it live</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://i.ibb.co/YLV0Z5Z/wvr1.png" alt="Wikipedia Viewer Screenshot">
+        <div class="project-card-content">
+          <h3>Wikipedia Viewer</h3>
+          <p>Web app using Wikipedia API that searches for/displays articles via user search.</p>
+          <p class="tech-stack">HTML, CSS, JavaScript, Wikipedia API</p>
+          <a href="https://s.codepen.io/brentonotis/debug/xjWXNm/ZoMBaKdeVgWk" target="_blank">See it here</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://i.ibb.co/HCmxrTy/lwv2.png" alt="Weather Viewer Screenshot">
+        <div class="project-card-content">
+          <h3>Local Weather Viewer</h3>
+          <p>Web app using geolocation and FCC API to display current user weather; toggles between F/C.</p>
+          <p class="tech-stack">HTML, CSS, JavaScript, FCC API</p>
+          <a href="https://s.codepen.io/brentonotis/debug/PeJRaL/NjrYzqxBjpqA" target="_blank">See it here</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://i.ibb.co/N2H6qXp/brqg1.png" alt="Quote Generator Screenshot">
+        <div class="project-card-content">
+          <h3>Bob's Quote Generator</h3>
+          <p>Web app that displays random (hard-coded) Bob Marley quote; Allows users to tweet result</p>
+          <p class="tech-stack">HTML, CSS, JavaScript</p>
+          <a href="https://s.codepen.io/brentonotis/debug/gzLvpV/mWAoNxDmeLXr" target="_blank">See it here</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://i.ibb.co/jwRVS8Y/sgp.png" alt="Student Grades Screenshot">
+        <div class="project-card-content">
+          <h3>Student Grade Program</h3>
+          <p>Program that allows user to input/retrieve/modify student grades (simulates gradebook) via hashmap.</p>
+          <p class="tech-stack">Java</p>
+          <a href="https://github.com/brentonotis/CSU_CSC372_Java/blob/master/StudentGrades.java" target="_blank">Source code here</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="https://i.ibb.co/dKqQDF0/fbpi.png" alt="Fantasy Baseball Screenshot">
+        <div class="project-card-content">
+          <h3>Fantasy Baseball Power Rank Generator</h3>
+          <p>Program that takes in fantasy baseball statistics and generates 'power rank'.</p>
+          <p class="tech-stack">Python</p>
+          <a href="https://github.com/brentonotis/Fantasy-Baseball-Power-Index-Generator/blob/master/fbpi.py" target="_blank">Source code here</a>
         </div>
       </div>
     </div>
